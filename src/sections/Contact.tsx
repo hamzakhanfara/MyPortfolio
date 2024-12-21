@@ -15,9 +15,9 @@ export const ContactSection = () => {
             }}></div>
           <div className='flex flex-col z-100 gap-8 md:gap-8 items-center'>
             <div>
-              <h2 className='font-serif md:text-center text-2xl md:text-3xl'>Let's create something amazing together</h2>
+              <h2 className='font-serif md:text-center text-2xl md:text-3xl'>Let&apos;s create something amazing together</h2>
               <p className='text-sm md:text-center md:text-base mt-2'>
-                Ready to bring your next project to life? Let's connect and discuss how I can help you achieve your goals.
+                Ready to bring your next project to life? Let&apos;s connect and discuss how I can help you achieve your goals.
               </p>
             </div>
             <div className='inline-block'>

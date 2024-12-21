@@ -32,7 +32,7 @@ export const AboutSection = () => {
               </CardHeader>
               <div className="flex flex-row items-center px-3 pb-6 gap-2">
                 <Image  className="size-[100px]" src={Avatar} alt="Person Peeking from behind laptop" />
-                <p className="text-sm lg:text-base lg:mt-4 text-white/60">I'm Hamza, a software Engineer specializing in Fullstack Development. I am passionate about building innovative, user-centric applications and leveraging cutting-edge technologies to solve complex challenges.</p>
+                <p className="text-sm lg:text-base lg:mt-4 text-white/60">I&apos;m Hamza, a software Engineer specializing in Fullstack Development. I am passionate about building innovative, user-centric applications and leveraging cutting-edge technologies to solve complex challenges.</p>
               </div>
             </Card>
             <Card className=" lg:col-span-2 h-[320px] lg:h-[388px] p-0 flex flex-col">
