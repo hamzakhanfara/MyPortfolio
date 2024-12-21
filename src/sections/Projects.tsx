@@ -1,6 +1,7 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import PanelDashboardPage from "@/assets/images/panel-dashboard-interface.png";
+import MyPortfolio from "@/assets/images/myportfolio-page.png";
+import scrapeFlowPage from "@/assets/images/scrape-flow-page.png";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg"
@@ -9,40 +10,49 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 const portfolioProjects = [
   {
+    company: "Panelio",
+    year: "2024",
+    title: "Inventory Management Dashboard",
+    results: [
+      { title: " FullStack Saas Fast and Interactive Invetory App." },
+      { title: "Supports real-time updates and advanced filtering options." },
+      { title: "Nextjs, Shadcn, Expressjs, postgresql." },
+    ],
+    link:[{
+      github:"https://github.com/hamzakhanfara/panel-dashboard",
+      demo: "https://github.com/hamzakhanfara/panel-dashboard",
+    }],
+    image: PanelDashboardPage,
+  },
+  {
+    company: "Personal project",
+    year: "2024",
+    title: "My portfolio",
+    results: [
+      { title: "Stunning Portfolio design." },
+      { title: "Built from scratch." },
+      { title: "Nextjs, Tailwind CSS, motion-frame." },
+    ],
+    link:[{
+      github:"https://github.com/hamzakhanfara/MyPortfolio",
+      demo: "https://github.com/hamzakhanfara/MyPortfolio",
+    }],
+    image: MyPortfolio,
+  },
+  {
     company: "Personal project",
     year: "2024",
     title: "Flow Scrape",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "FullStack Saas for building webscrapers visually." },
+      { title: "AI powered tool." },
+      { title: "Nextjs, Shadcn, Stripe, Prisma." },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link:[{
+      github:"https://github.com/hamzakhanfara/scrapeFlow",
+      demo: "https://github.com/hamzakhanfara/scrapeFlow",
+    }],
+    image: scrapeFlowPage,
   },
 ];
 
@@ -71,13 +81,13 @@ export const ProjectsSection = () => {
                   ))}
                 </ul>
                 <div className="flex md:w-auto w-full flex-row items-center mt-8 gap-3">
-                  <a href={project.link}>
+                  <a href={project.link[0].github}>
                     <button className=" bg-white text-gray-950 h-12 p-2 flex-row rounded-xl font-semibold justify-center gap-1 inline-flex items-center">
                       <Github />
                       <span>View Code</span>
                     </button>
                   </a>
-                  <a href={project.link}>
+                  <a href={project.link[0].demo}>
                     <button className=" bg-white  text-gray-950 h-12 p-2 flex-row rounded-xl font-semibold justify-center gap-1 inline-flex items-center">
                       <ExternalLink />
                       <span>View Demo</span>
@@ -85,8 +95,8 @@ export const ProjectsSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="relative">
-                <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" />
+              <div className="relative ">
+                <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none border-x-8 border-t-8 rounded-lg border-gray-950 " />
               </div>
             </div>
           </Card>
